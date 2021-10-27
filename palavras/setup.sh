@@ -7,6 +7,6 @@ echo -n "building palavras image..."
 docker build -t palavras .
 echo "done"
 
-echo -n "testing..."
+echo "testing..."
 ./test.sh
-echo "done"
+echo "\ndone"

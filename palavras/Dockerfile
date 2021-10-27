@@ -1,5 +1,6 @@
 FROM ubuntu:16.04
 
+# variables
 ARG PALAVRAS_REVISION="11952"
 
 # base settings for system
@@ -20,3 +21,5 @@ COPY palavras.sh /root/palavras.sh
 RUN tar -xjf palavras-r$PALAVRAS_REVISION.tar.bz2 && rm palavras-r$PALAVRAS_REVISION.tar.bz2
 RUN palavras-r$PALAVRAS_REVISION/install-ubuntu.sh
 RUN rm -rf palavras-r$PALAVRAS_REVISION
+
+ENTRYPOINT ["bash"]
