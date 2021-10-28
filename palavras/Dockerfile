@@ -22,4 +22,4 @@ RUN tar -xjf palavras-r$PALAVRAS_REVISION.tar.bz2 && rm palavras-r$PALAVRAS_REVI
 RUN palavras-r$PALAVRAS_REVISION/install-ubuntu.sh
 RUN rm -rf palavras-r$PALAVRAS_REVISION
 
-ENTRYPOINT ["bash"]
+# ENTRYPOINT ["bash"]

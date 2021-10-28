@@ -4,7 +4,7 @@
 # docker build -t palavras --progress=plain .
 
 echo -n "building palavras image..."
-docker build -t palavras .
+docker build -t "$ENSEPRO_PREFIX"palavras .
 echo "done"
 
 echo "testing..."
