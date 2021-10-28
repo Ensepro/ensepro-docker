@@ -1,13 +1,15 @@
 #! /bin/bash
 
-export FILE="cbow_s50.text"
+export FILE="cbow_s50.txt"
 
 # stop and remove container before running
 docker container stop "$ENSEPRO_PREFIX"embeddings  &> /dev/null
 docker container rm "$ENSEPRO_PREFIX"embeddings  &> /dev/null
 
 # run
-docker run -t -d --name "$ENSEPRO_PREFIX"embeddings -p 8098:8098 "$ENSEPRO_PREFIX"embeddings bash
+docker run -d --name "$ENSEPRO_PREFIX"embeddings -p 8098:8098 "$ENSEPRO_PREFIX"embeddings bash
+
+sleep 10
 
 # set embedding vector
 curl --location --request POST 'http://localhost:8098/word-embedding/vector/update' \

@@ -4,7 +4,7 @@ FROM ubuntu:16.04
 ARG PALAVRAS_REVISION="11952"
 ARG PALAVRAS_SERVICE="https://github.com/Ensepro/ensepro-palavras-service/archive/refs/heads/master.zip"
 
-RUN apt-get update 
+RUN apt-get update \
  && apt-get -y install sudo vim unzip bzip2 locales wget icu-devtools software-properties-common \
  && add-apt-repository -y ppa:deadsnakes/ppa \
  && apt-get update \

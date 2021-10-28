@@ -5,4 +5,4 @@ docker stop "$ENSEPRO_PREFIX"palavras &> /dev/null
 docker container rm "$ENSEPRO_PREFIX"palavras &> /dev/null
 
 # run
-docker run -t -d --name "$ENSEPRO_PREFIX"palavras -p 8099:8099 "$ENSEPRO_PREFIX"palavras bash
+docker run -d --name "$ENSEPRO_PREFIX"palavras -p 8099:8099 "$ENSEPRO_PREFIX"palavras bash
