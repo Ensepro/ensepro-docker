@@ -1,7 +1,6 @@
 #! /bin/bash
 
-export TYPE="fasttext"
-export FILE="cbow_s50.zip"
+export FILE="cbow_s50.text"
 
 # stop and remove container before running
 docker container stop "$ENSEPRO_PREFIX"embeddings  &> /dev/null
