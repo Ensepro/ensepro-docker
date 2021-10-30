@@ -5,6 +5,7 @@ export ENSEPRO_PREFIX="arh-"
 declare -a arr=(
    "palavras" 
    "ensepro-similarity"
+   "ensepro-core"
 )
 
 for i in "${arr[@]}"
