@@ -18,7 +18,7 @@ ENV PERL_UNICODE=SDA
 
 # copy/download necessary files
 COPY palavras-r$PALAVRAS_REVISION.tar.bz2 palavras-r$PALAVRAS_REVISION.tar.bz2
-COPY palavras.sh /root/palavras.sh
+COPY root/palavras.sh /root/palavras.sh
 ADD $PALAVRAS_SERVICE /service.zip
 
 # setup Palavras

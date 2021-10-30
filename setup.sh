@@ -1,10 +1,12 @@
 #! /bin/bash
 
+date > start.txt
+
 export ENSEPRO_PREFIX="arh-"
 
 declare -a arr=(
-   "palavras" 
-   "ensepro-similarity"
+   #"palavras" 
+   #"ensepro-similarity"
    "ensepro-core"
 )
 
@@ -15,3 +17,5 @@ do
    ./run.sh
    cd ..
 done
+
+date > end.txt
