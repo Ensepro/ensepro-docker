@@ -1,16 +1,15 @@
 FROM ubuntu:18.04
 
 # variables
-ARG PALAVRAS_REVISION="11952"
+ARG PALAVRAS_REVISION="17948"
 ARG PALAVRAS_SERVICE="https://github.com/Ensepro/ensepro-palavras-service/archive/refs/heads/master.zip"
 
-RUN apt-get update \
- && apt-get -y install sudo vim unzip bzip2 locales wget icu-devtools software-properties-common \
+RUN apt-get clean \
+ && apt-get update \
+ && apt-get -y install sudo vim unzip bzip2 locales wget software-properties-common \
  && add-apt-repository -y ppa:deadsnakes/ppa \
  && apt-get update \
  && apt-get -y install python3.7 python3-pip \
- && apt-get -y install perl perl-modules build-essential gcc g++ autoconf automake libdb-dev cg3 \
- && apt-get -y install libc6-dev-i386 \
  && locale-gen pt_BR.UTF-8
 
 ENV LANG=pt_BR.UTF-8
@@ -30,6 +29,7 @@ RUN tar -xjf palavras-r$PALAVRAS_REVISION.tar.bz2 \
 # setup palavras-service
 RUN unzip service.zip \
  && rm service.zip \
+ && python3.7 -m pip install --upgrade pip \
  && python3.7 -m pip install -r /ensepro-palavras-service-master/requirements.txt \
  && mkdir palavras \
  && mv /ensepro-palavras-service-master/* palavras/

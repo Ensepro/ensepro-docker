@@ -1,4 +1,4 @@
-FROM ubuntu:16.04
+FROM ubuntu:18.04
 
 ARG ENSEPRO_CORE="https://github.com/Ensepro/ensepro-core/archive/refs/heads/feat/v2-compatible-problems.zip"
 
@@ -19,6 +19,7 @@ ADD root/* /root/
 RUN ./ag-setup.sh \
  && unzip ensepro-core.zip \
  && mkdir ensepro-core \
+ && mkdir /root/resultados \
  && mv ensepro-core-feat-v2-compatible-problems/* /ensepro-core \
  && rm -rf ensepro-core-feat-v2-compatible-problems \
  && rm ensepro-core.zip \
