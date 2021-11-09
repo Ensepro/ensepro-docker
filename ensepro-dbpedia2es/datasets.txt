@@ -1,0 +1,4 @@
+http://downloads.dbpedia.org/2016-10/core-i18n/pt/article_categories_pt.ttl.bz2 
+http://downloads.dbpedia.org/2016-10/core-i18n/pt/article_templates_pt.ttl.bz2 
+http://downloads.dbpedia.org/2016-10/core-i18n/pt/category_labels_pt.ttl.bz2 
+http://downloads.dbpedia.org/2016-10/core-i18n/pt/commons_page_links_pt.ttl.bz2 

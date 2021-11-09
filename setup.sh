@@ -5,6 +5,9 @@ date > start.txt
 export ENSEPRO_PREFIX="arh-"
 
 declare -a arr=(
+   "spotlight"
+   "elasticsearch"
+   "ensepro-dbpedia2es"
    "palavras" 
    "ensepro-similarity"
    "ensepro-core"

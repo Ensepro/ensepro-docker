@@ -10,6 +10,7 @@ RUN apt-get clean \
  && add-apt-repository -y ppa:deadsnakes/ppa \
  && apt-get update \
  && apt-get -y install python3.7 python3-pip \
+ && python3.7 -m pip install --upgrade pip \
  && locale-gen pt_BR.UTF-8
 
 ENV LANG=pt_BR.UTF-8
@@ -29,7 +30,6 @@ RUN tar -xjf palavras-r$PALAVRAS_REVISION.tar.bz2 \
 # setup palavras-service
 RUN unzip service.zip \
  && rm service.zip \
- && python3.7 -m pip install --upgrade pip \
  && python3.7 -m pip install -r /ensepro-palavras-service-master/requirements.txt \
  && mkdir palavras \
  && mv /ensepro-palavras-service-master/* palavras/

@@ -1,0 +1,1 @@
+docker exec -d "$ENSEPRO_PREFIX"dbpedia2es python3.7 Main.py

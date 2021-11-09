@@ -4,7 +4,8 @@ ARG ENSEPRO_CORE="https://github.com/Ensepro/ensepro-core/archive/refs/heads/fea
 
 ENV JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-amd64
 
-RUN apt-get update \
+RUN apt-get clean \
+ && apt-get update \
  && apt-get -y install sudo vim unzip software-properties-common git jq \
  && apt-get -y install openjdk-8* \
  && apt-get -y install maven maven* \
