@@ -9,8 +9,8 @@ declare -a arr=(
    "elasticsearch"
    "ensepro-dbpedia2es"
    "palavras" 
-   "ensepro-similarity"
-   "ensepro-core"
+   #"ensepro-similarity"
+   #"ensepro-core"
 )
 
 for i in "${arr[@]}"

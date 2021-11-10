@@ -1,9 +1,9 @@
 #! /bin/bash
 
 # stop and remove container before running
-docker container stop "$ENSEPRO_PREFIX"elasticsearch &> /dev/null
-docker container rm "$ENSEPRO_PREFIX"elasticsearch &> /dev/null
-docker network rm "$ENSEPRO_PREFIX"network &> /dev/null
+docker container stop "$ENSEPRO_PREFIX"elasticsearch &>> logs.txt
+docker container rm "$ENSEPRO_PREFIX"elasticsearch &>> logs.txt
+docker network rm "$ENSEPRO_PREFIX"network &>> logs.txt
 
 # run 
 docker network create "$ENSEPRO_PREFIX"network

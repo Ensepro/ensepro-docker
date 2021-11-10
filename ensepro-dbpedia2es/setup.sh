@@ -4,9 +4,9 @@
 ./dataset_download.sh
 
 # remove any existing container and images
-docker container stop "$ENSEPRO_PREFIX"dbpedia2es &> /dev/null
-docker container rm "$ENSEPRO_PREFIX"dbpedia2es &> /dev/null
-docker image rm "$ENSEPRO_PREFIX"dbpedia2es &> /dev/null
+docker container stop "$ENSEPRO_PREFIX"dbpedia2es &>> logs.txt
+docker container rm "$ENSEPRO_PREFIX"dbpedia2es &>> logs.txt
+docker image rm "$ENSEPRO_PREFIX"dbpedia2es &>> logs.txt
 
 # build
 docker build \

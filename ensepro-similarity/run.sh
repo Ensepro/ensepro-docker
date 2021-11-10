@@ -3,8 +3,8 @@
 export FILE="cbow_s50.txt"
 
 # stop and remove container before running
-docker container stop "$ENSEPRO_PREFIX"embeddings  &> /dev/null
-docker container rm "$ENSEPRO_PREFIX"embeddings  &> /dev/null
+docker container stop "$ENSEPRO_PREFIX"embeddings  &>> logs.txt
+docker container rm "$ENSEPRO_PREFIX"embeddings  &>> logs.txt
 
 # run
 docker run -d --name "$ENSEPRO_PREFIX"embeddings -p 8098:8098 "$ENSEPRO_PREFIX"embeddings bash

@@ -19,7 +19,7 @@ if [ $DOWNLOAD_DATASET = true ]; then
     rm -rf $DATASET_FOLDER
     mkdir $DATASET_FOLDER
     cd $DATASET_FOLDER
-    xargs -P 5 -n 1 curl -O < $DBPEDIA_DATASET_LIST &> /dev/null
+    xargs -P 5 -n 1 curl -O < $DBPEDIA_DATASET_LIST &>> logs.txt
     cd ..
 fi
 echo "done"

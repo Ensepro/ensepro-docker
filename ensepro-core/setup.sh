@@ -1,9 +1,9 @@
 #! /bin/bash
 
 # remove any existing container and images
-docker container stop "$ENSEPRO_PREFIX"ensepro &> /dev/null
-docker container rm "$ENSEPRO_PREFIX"ensepro &> /dev/null
-docker image rm "$ENSEPRO_PREFIX"ensepro &> /dev/null
+docker container stop "$ENSEPRO_PREFIX"ensepro &>> logs.txt
+docker container rm "$ENSEPRO_PREFIX"ensepro &>> logs.txt
+docker image rm "$ENSEPRO_PREFIX"ensepro &>> logs.txt
 
 # build
 docker build \
