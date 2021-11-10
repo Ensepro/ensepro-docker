@@ -10,8 +10,6 @@ RUN apt-get update \
 ADD ./datasets/* /datasets/
 ADD $ENSEPRO_DBPEDIA2ES /ensepro-dbpedia2es.zip
 
-RUN bzip2 -d /datasets/*.bz2
-
 RUN unzip ensepro-dbpedia2es.zip \
  && mkdir ensepro-dbpedia2es \
  && mv ensepro-dbpedia-dataset-to-elasticsearch-master/* /ensepro-dbpedia2es \
