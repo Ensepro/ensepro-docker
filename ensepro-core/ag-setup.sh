@@ -1,10 +1,7 @@
 #! /bin/bash
 
 api="ensepro-answer-generator"
-jar_path="/c/_ensepro/ensepro-docker/ensepro-core/jars"
-
-
-
+jar_path="/jars"
 
 echo -n "removing $api..."
 rm -rf /$api &>> logs.txt
