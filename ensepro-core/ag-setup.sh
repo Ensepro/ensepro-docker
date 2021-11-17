@@ -47,25 +47,25 @@ echo "done"
 
 
 declare -a arr=(
-    "all2" 
-    "all3"
-    "all4"
-    "all5"
+    "l2"
+    "l3"
+    "l4"
+    "l5"
 )
 
 for i in "${arr[@]}"
 do
-   echo -n "[$i] checking out $i branch..."
-    git checkout feat/"$i" &>> logs.txt
+   echo -n "[al$i] checking out al$i branch..."
+    git checkout feat/all-"$i" &>> logs.txt
     rm -rf /target
     echo "done"
 
-    echo -n "[$i] building ensepro $i..."
+    echo -n "[al$i] building ensepro al$i..."
     mvn clean install &>> logs.txt
     echo "done"
 
-    echo -n "[$i] saving .jar for $i version..."
-    mv ./target/ensepro-answer-generator-1.0-SNAPSHOT-spring-boot.jar $jar_path/ensepro-answer-generator-"$i".jar &>> logs.txt
+    echo -n "[al$i] saving .jar for al$i version..."
+    mv ./target/ensepro-answer-generator-1.0-SNAPSHOT-spring-boot.jar $jar_path/ensepro-answer-generator-al"$i".jar &>> logs.txt
     echo "done"
 done
 
